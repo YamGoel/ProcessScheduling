@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SJF Process Scheduling Algorithm with Gantt Chart</title>
+	<style>
+		/* CSS for the Gantt chart */
+		.gantt {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			margin-bottom: 20px;
+		}
+		.gantt-bar {
+			height: 30px;
+			background-color: #007bff;
+			border: 1px solid #007bff;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 0 5px;
+			position: relative;
+		}
+		.gantt-bar:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0%;
+			background-color: rgba(0, 123, 255, 0.2);
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<h1>SJF Process Scheduling Algorithm with Gantt Chart</h1>
+	<p>Enter process details separated by commas:</p>
+	<textarea id="process-details" rows="3" cols="30"></textarea>
+	<br>
+	<button type="button" onclick="computeSJF()">Compute SJF</button>
+	<br><br>
+	<table id="sjf-table">
+		<thead>
+			<tr>
+				<th>Process ID</th>
+				 <th>Arrival Time</th>
+				 <th>Burst Time</th>
+				 <th>Completion Time</th>
+				 <th>Turnaround Time</th>
+				 <th>Waiting Time</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<div id="gantt-chart"></div>
+    <script src="SJF .js"></script>
+</body>
+</html>

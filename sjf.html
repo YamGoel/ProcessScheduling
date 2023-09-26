@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SJF Process Scheduling Algorithm with Gantt Chart</title>
+	<style>
+		/* CSS for the Gantt chart */
+		.gantt {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			margin-bottom: 20px;
+		}
+		.gantt-bar {
+			height: 30px;
+			background-color: #007bff;
+			border: 1px solid #007bff;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 0 5px;
+			position: relative;
+		}
+		.gantt-bar:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0%;
+			background-color: rgba(0, 123, 255, 0.2);
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<h1>SJF Process Scheduling Algorithm with Gantt Chart</h1>
+	<form>
+		<label for="process-id">Process ID:</label>
+		<input type="text" id="process-id" required>
+		<label for="arrival-time">Arrival Time:</label>
+		<input type="number" id="arrival-time" required>
+		<label for="burst-time">Burst Time:</label>
+		<input type="number" id="burst-time" required>
+		<button type="button" onclick="addProcess()">Add Process</button>
+	</form>
+	<div id="gantt-chart"></div>
+    <script src="fcfs.js"></script>
+</body>
+</html>
